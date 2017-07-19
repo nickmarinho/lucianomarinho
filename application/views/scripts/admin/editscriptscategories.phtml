@@ -1,8 +1,0 @@
-<?php $row = $this->row; ?>
-  <td id='td_<?php echo $this->div; ?>' colspan='2' style='cursor:pointer;width:944px;'>
-   <input type='text' name='namenew_<?php echo $row['id']; ?>' id='namenew_<?php echo $row['id']; ?>' value='<?php echo utf8_encode(stripslashes($row['name'])); ?>' onkeypress='updatescriptscategories("<?php echo $row['id']; ?>", "<?php echo $this->div; ?>", event);' size='<?php echo strlen($row['name']); ?>' /><input type='hidden' name='id' id='id' value='<?php echo $row['id']; ?>' />
-   <a class="button" onclick='updatemscriptscategories("<?php echo $row['id']; ?>", "<?php echo $this->div; ?>");'>Ok</a>
-   <a class="button" onclick="canceledit('<?php echo $row['id']; ?>', '<?php echo $this->div; ?>', 'scriptscategories');">Cancel</a>
-   <script type='text/javascript'>$(".button").button();</script>
-  </td>
-  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/delete.png' style='border:0px;cursor:pointer;' onclick="removescriptscategories'<?php echo $row['id']; ?>', '<?php echo $this->div; ?>');" title="Deletar <?php echo $row['id']; ?>" /></td>

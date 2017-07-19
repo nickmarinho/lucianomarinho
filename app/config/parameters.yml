@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_port: 587
+    mailer_host: mail.lucianomarinho.com.br
+    mailer_user: contato@lucianomarinho.com.br
+    mailer_password: nick1978
+    secret: a5794ee8d18494e79295e65958bd3e9f6d4a671e

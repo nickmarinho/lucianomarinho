@@ -1,0 +1,240 @@
+{% extends 'base.html.twig' %}
+
+{% set page_title = 'Página Inicial' %}
+
+{% form_theme form 'forms/fields.html.twig' %}
+
+{% block body %}
+			<div class="container" id="bio-animate">
+				<div class="row row-padded">
+					<div class="col-md-3">
+						<h2 class="lma-section-heading to-animate">Biografia<span class="lma-border"></span></h2>
+					</div>
+					<div class="col-md-8 col-md-push-1">
+						<div class="row">
+							<div class="col-md-6 to-animate">
+								<p>Comecei minha carreira na área de informática em meados do ano 2000, num curso de montagem e manutenção de computadores.</p>
+								<p>Em 2002, depois de estudar: html, javascript, css, entrei no mundo das línguagens dinâmicas com o velho ASP (sim, eu estudei isso! rsrs)</p>
+								<p>No glorioso ano de 2005 entrei no mundo PHP e Linux. Desenvolvendo uma série de sites e pequenos sistemas web internos para empresas de diversos segmentos.</p>
+							</div>
+							<div class="col-md-6 to-animate">
+								<p>Entrei para a faculdade, no final de 2006, no curso de análise e desenvolvimento de sistemas, na extinta FATED (Faculdades Integradas Diamante) no centro de SP.</p>
+								<p>Já em 2009/2010 fiz minha primeira tentativa de sair da área de programação fazendo um curso de Administrador Linux na 4Linux - LPI1 I e II ;)</p>
+								<p>Finalizei o curso, adoro o mundo Linux, porém, devido às poucas oportunidades, continuei na área de Análise e desenvolvimento de sistemas.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END .row -->
+			</div>
+			<!-- END .container -->
+			
+			<div class="container" id="tech-animate">
+				<div class="row row-padded">
+					<div class="col-md-3">
+						<h2 class="lma-section-heading to-animate">Tecnologias<span class="lma-border"></span></h2>
+						<p class="to-animate">Línguagens e softwares que utilizo ou já utilizei</p>
+					</div>
+					<div class="col-md-8 col-md-push-1">
+						<div class="row">
+							<div class="col-md-6 to-animate">
+								<p>HTML, HTML5, Javascript, jQuery, CSS, CSS3</p>
+								<p>SQL, MySQL, MongoDB, Oracle</p>
+								<p>PHP5, Shell Script, ASP clássico, Java, Pawno</p>
+							</div>
+							<div class="col-md-6 to-animate">
+								<p>Apache, EasyPHP, Xampp, Zend 1 e 2, Symfony</p>
+								<p>Notepad++, Sublime Text, Eclipse, GIMP, Photoshop, Sony Vegas</p>
+								<p>Audacity, Bandicam, Google Chrome, Opera</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END .row -->
+			</div>
+			<!-- END .container -->
+			
+			<div class="container" id="projects-animate">
+				<div class="row row-padded">
+					<div class="col-md-3">
+						<h2 class="lma-section-heading to-animate">Projetos<span class="lma-border"></span></h2>
+						<p class="to-animate">Clique nas imagens para mais detalhes</p>
+					</div>
+					<div class="col-md-8 col-md-push-1">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_1.jpg')}}" class="image-popup" title="Criação do backend e do site Reserve Hotel Online" data-website="http://www.reservehotelonline.com.br/" data-website-text="www.reservehotelonline.com.br">
+									<div class="lma-overlay-text">Criação do backend e do site Reserve Hotel Online</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_1.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_2.jpg')}}" class="image-popup" title="Participação no projeto Applepie Shopping Cart" data-website="http://www.seoshoppingcarts.com/reviews/merchant-metrix-shopping-cart/" data-website-text="Merchant Metrix">
+									<div class="lma-overlay-text">Participação no projeto Applepie Shopping Cart</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_2.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_3.jpg')}}" class="image-popup" title="Criação total de nova versão do Sistema Interno da Cetre do Brasil" data-website="http://www.cetre.com.br/" data-website-text="www.cetre.com.br">
+									<div class="lma-overlay-text">Criação total de nova versão do Sistema Interno da Cetre do Brasil</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_3.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_4.jpg')}}" class="image-popup" title="Administrador Linux na Telefónica - Sede República - SP" data-website="" data-website-text="">
+									<div class="lma-overlay-text">Administrador Linux na Telefónica, Sede República, SP</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_4.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_5.jpg')}}" class="image-popup" title="Analista Desenvolvedor na Telefonica - Sede Paulista - SP" data-website="" data-website-text="">
+									<div class="lma-overlay-text">Analista Desenvolvedor na Telefonica, Sede Paulista, SP</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_5.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_6.jpg')}}" class="image-popup" title="Analista Desenvolvedor na Folha de SP" data-website="" data-website-text="">
+									<div class="lma-overlay-text">Analista Desenvolvedor na Folha de SP</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_6.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_1.jpg')}}" class="image-popup" title="Analista Desenvolvedor na Marabraz - Cajamar - SP" data-website="" data-website-text="">
+									<div class="lma-overlay-text">Analista Desenvolvedor na Marabraz - Cajamar - SP</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_1.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 lma-project to-animate">
+								<a href="{{ asset('images/work_2.jpg')}}" class="image-popup" title="Analista Desenvolvedor na Clínica Fares - SP" data-website="www.clinicafares.com.br" data-website-text="www.clinicafares.com.br">
+									<div class="lma-overlay-text">Analista Desenvolvedor na Clínica Fares</div>
+									<div class="lma-overlay"></div>
+									<img src="{{ asset('images/work_2.jpg')}}" class="img-responsive">
+								</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- END .row -->
+			</div>
+			<!-- END .container -->
+
+			<div class="lma-section-seperator" id="testimony-animate" style="background-image: url({{ asset('images/linux-i-am-root.jpg')}});" data-stellar-background-ratio="0.5">
+				<div class="lma-overlay"></div>
+				<div class="container">
+					<div class="lma-section-content-wrap">
+						<div class="lma-section-content">
+							<div class="row">
+								<div class="col-md-9 col-md-offset-1 lma-testimony to-animate">
+									<blockquote>
+										<p class="text-center quote">&ldquo;Na minha opinião, a Microsoft é muito melhor em fazer <em>dinheiro</em> do que Sistemas Operacionais.&rdquo; <cite class="author">&mdash; Linus Torvalds</cite></p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END .container -->
+
+			<div class="container" id="services-animate">
+				<div class="row row-padded">
+					<div class="col-md-3">
+						<h2 class="lma-section-heading to-animate">Extra<span class="lma-border"></span></h2>
+						<p class="to-animate">Atividades extra que desempenho fora do mundo de programação.</p>
+					</div>
+					<div class="col-md-8 col-md-push-1">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="lma-accordion-wrap">
+									<div class="lma-accordion to-animate">
+										<div class="lma-accordion-head">
+											<a href="#" class="lma-accordion-toggle js-lma-accordion-toggle">Mais Detalhes</a>
+											<h3><i class="icon-clapperboard"></i>Áudio e Vídeo</h3>
+										</div>
+										<div class="lma-accordion-body active">
+											<p>Pouco antes de iniciar meus estudos na área de desenvolvimento de sites e sistemas, eu trabalhei numa Agência para <a href="http://www.radiophoenix.jp/" target="_blank">Rádio Phoenix</a> com edição de áudio e vídeo.</p>
+											<p>O trabalho em sí consistia em passar conteúdo de fitas K7 de vídeo para o formato digital.</p>
+											<p>Desde então, mesmo me tornando analista programador, sou apaixonado por essa área e mantenho um canal no youtube onde coloco meus vídeos de gameplays de jogos que gosto.</p>
+										</div>  
+									</div>
+									<!-- END .lma-accordion -->
+
+									<div class="lma-accordion to-animate">
+										<div class="lma-accordion-head">
+											<a href="#" class="lma-accordion-toggle js-lma-accordion-toggle">Mais Detalhes</a>
+											<h3><i class="icon-code"></i>Games</h3>
+										</div>
+										<div class="lma-accordion-body">
+											<p>Em um dado momento da minha vida, me ví jogando um jogo chamado GTA Torcidas, e nele, como afixionado por programação que sou, resolví aprender a criar gamemodes.</p>
+											<p>Criei o meu depois de uns 3 meses de trabalho árduo e coloquei num servidor para testar com amigos.</p>
+											<p>Uma línguagem que chamam de Small C ou Pawno, que consiste em comandos para personagens de GTA SAN ANDREAS.</p>
+										</div>  
+									</div>
+									<!-- END .lma-accordion -->
+
+									<div class="lma-accordion to-animate">
+										<div class="lma-accordion-head">
+											<a href="#" class="lma-accordion-toggle js-lma-accordion-toggle">Mais Detalhes</a>
+											<h3><i class="icon-mobile"></i>Mundo Mobile</h3>
+										</div>
+										<div class="lma-accordion-body">
+											<p>Me aventurei no mundo java também, criando pequenas aplicações para uso próprio, mais para aprender e ver como funcionava.</p>
+											<p>Nada comercial, em que possa me aventurar em, talvez, uma colocação nessa área</p>
+										</div>  
+									</div>
+									<!-- END .lma-accordion -->
+
+									<div class="lma-accordion to-animate">
+										<div class="lma-accordion-head">
+											<a href="#" class="lma-accordion-toggle js-lma-accordion-toggle">Mais Detalhes</a>
+											<h3><i class="icon-network"></i>Cães</h3>
+										</div>
+										<div class="lma-accordion-body">
+											<p>Sou um apaixonado por cães e não escondo isso de ninguém, desde minha infância</p>
+											<p>Por isso, depois que perdí um fiel amigo em 1996, decidi criar um site e o mantenho até hoje como uma espécie de homenagem a ele.</p>
+											<p>Quer conhecer ? >>> <a href="http://www.racaboxer.com.br/" target="_blank">Raça Boxer</a> </p>
+										</div>  
+									</div>
+									<!-- END .lma-accordion -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END .row -->
+
+			</div>
+			<!-- END .container -->
+
+			<div class="lma-section-seperator lma-section-seperator-white" id="contact-animate" style="background-image: url({{ asset('images/hand-laptop-notebook.jpg')}});" data-stellar-background-ratio="0.5">
+				<div class="lma-overlay"></div>
+				<div class="container">
+					<div class="lma-section-content-wrap">
+						<div class="lma-section-content">
+							<div class="row">
+								
+								<div class="col-md-3">
+									<h2 class="lma-section-heading to-animate">Entre em contato<span class="lma-border"></span></h2>
+									
+									<ul class="lma-contact">
+										<li class="to-animate"><i class="icon-email"></i>contato@lucianomarinho.com.br</li>
+									</ul>
+								</div>
+
+{% include 'forms/contact-form.html.twig' %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END .container -->
+{% endblock %}

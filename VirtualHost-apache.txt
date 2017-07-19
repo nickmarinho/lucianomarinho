@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+        ServerName lucianomarinho.localhost
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/lucianomarinho
+
+        <Directory /var/www/lucianomarinho>
+                AllowOverride All
+                Order Allow,Deny
+                Allow from All
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/lucianomarinho-error.log
+        CustomLog ${APACHE_LOG_DIR}/lucianomarinho-access.log combined
+        DirectoryIndex app.php
+</VirtualHost>
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet

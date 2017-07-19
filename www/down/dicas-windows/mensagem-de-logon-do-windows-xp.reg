@@ -1,5 +1,0 @@
-REGEDIT4
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Winlogon]
-"LegalNoticeCaption"="Digite o título da janela aqui"
-"LegalNoticeText"="Digite aqui o texto da mensagem que aparecerá abaixo"

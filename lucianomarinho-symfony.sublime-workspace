@@ -1,0 +1,459 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ini_get_al",
+				"ini_get_all"
+			],
+			[
+				"open",
+				"open_basedir"
+			],
+			[
+				"ini",
+				"ini_get〔function〕"
+			],
+			[
+				"form",
+				"form_start"
+			],
+			[
+				"req",
+				"$request〔variable〕"
+			],
+			[
+				"ac",
+				"action"
+			],
+			[
+				"te",
+				"text-align: 〔property〕"
+			],
+			[
+				"app",
+				"AppBundle"
+			],
+			[
+				"notes",
+				"notesUrl〔variable〕"
+			],
+			[
+				"h",
+				"$html〔variable〕"
+			],
+			[
+				"C",
+				"Controller〔namespace〕"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/easyphp-devserver-14-1vc11/data/localweb/gis/api/includes/classes/GIS.php",
+			"settings":
+			{
+				"buffer_size": 1082641,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 497.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/lucianomarinho/web/app_dev.php",
+		"/var/www/lucianomarinho/web/app.php",
+		"/var/www/lucianomarinho/bin/console",
+		"/var/www/lucianomarinho/open_basedir.php",
+		"/var/www/lucianomarinho/composer.json",
+		"/tmp/fz3temp-1/composer.json",
+		"/tmp/fz3temp-1/app_dev.php",
+		"/var/www/lucianomarinho/README.md",
+		"/var/www/lucianomarinho/composer.lock",
+		"/tmp/fz3temp-1/.htaccess",
+		"/var/www/lucianomarinho/.htaccess",
+		"/tmp/fz3temp-1/bootstrap.php.cache",
+		"/tmp/fz3temp-1/.gitkeep",
+		"/var/www/lucianomarinho/app/Resources/views/default/index.html.twig",
+		"/var/www/lucianomarinho/src/AppBundle/Controller/DefaultController.php",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php",
+		"/var/www/lucianomarinho/app/Resources/views/forms/contact-form.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/default/contact-default.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/default/contact-form.html.twig",
+		"/var/www/lucianomarinho/app/config/config.yml",
+		"/var/www/lucianomarinho/app/Resources/views/forms/fields.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/default/contact-email.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/default/contact-success.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/default/contact-error.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/base.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/Form/fields.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/EmailType.php",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/TextareaType.php",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/DateType.php",
+		"/var/www/lucianomarinho/app/config/parameters.yml",
+		"/var/www/lucianomarinho/app/config/config_prod.yml",
+		"/var/www/lucianomarinho/app/config/config_dev.yml",
+		"/var/www/lucianomarinho/web/js/main.js",
+		"/home/luciano/.config/sublime-text-2/Packages/HTML/HTML.sublime-completions",
+		"/home/luciano/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/var/www/lucianomarinho/web/config.php",
+		"/var/www/lucianomarinho/web/css/icomoon.css",
+		"/var/www/lucianomarinho/web/css/style.css",
+		"/var/www/lucianomarinho/web/sass/bootstrap/_theme.scss",
+		"/var/www/lucianomarinho/web/sass/bootstrap/_scaffolding.scss",
+		"/var/www/lucianomarinho/app/Resources/TwigBundle/views/Exception/exception.html.twig",
+		"/var/www/lucianomarinho/web/index.html",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig",
+		"/var/www/lucianomarinho/src/AppBundle/Controller/GenusController.php",
+		"/var/www/lucianomarinho/src/AppBundle/Controller/ExceptionController.php",
+		"/var/www/lucianomarinho/app/Resources/views/genus/show.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/exception/show.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Controller/ExceptionController.php",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception_full.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig",
+		"/var/www/lucianomarinho/web/sass/style.scss",
+		"/var/www/lucianomarinho/web/fonts/icomoon/icomoon.svg",
+		"/var/www/lucianomarinho/web/.htaccess",
+		"/var/www/lucianomarinho/web/css/magnific-popup.css",
+		"/var/www/lucianomarinho/web/css/animate.css",
+		"/home/luciano/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/luciano/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/var/www/lucianomarinho/app/Resources/views/default/index.html-old.twig",
+		"/var/www/lucianomarinho/app/Resources/views/base.html-old.twig",
+		"/var/www/lucianomarinho/web/js/main-old.js",
+		"/home/luciano/downloads/verge/README.txt",
+		"/var/www/lucianomarinho/VirtualHost-apache.txt",
+		"/var/www/lucianomarinho/web/css/styles.css",
+		"/var/www/lucianomarinho/web/robots.txt",
+		"/var/www/lucianomarinho/app/Resources/views/base2.html.twig",
+		"/var/www/lucianomarinho/app/Resources/TwigBundle/views/Exception/error404.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/routing/errors.xml",
+		"/var/www/lucianomarinho/app/config/routing.yml",
+		"/var/www/lucianomarinho/app/Resources/views/error/show.html.twig",
+		"/var/www/lucianomarinho/app/Resources/views/genus/show.html.twig--",
+		"/var/www/lucianomarinho/app/config/routing_dev.yml",
+		"/var/www/lucianomarinho/app/config/services.yml",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.html.twig",
+		"/var/www/lucianomarinho/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/RedirectController.php",
+		"/var/www/lucianomarinho/var/bootstrap.php.cache",
+		"/var/www/lucianomarinho/tests/AppBundle/Controller/DefaultControllerTest.php",
+		"/var/www/lucianomarinho/src/AppBundle/Controller/ErrorController.php",
+		"/var/www/lucianomarinho/vendor/composer/ClassLoader.php",
+		"/var/www/lucianomarinho/run-symfony_lucianomarinho.sh",
+		"/var/www/lucianomarinho/web/index.php",
+		"/var/www/lucianomarinho/app/.htaccess",
+		"/var/www/symfony-project/README.md",
+		"/var/www/symfony-project/app/Resources/views/base.html.twig",
+		"/var/www/symfony-project/web/js/notes.react.js",
+		"/var/www/symfony-project/app/Resources/views/genus/show.html.twig",
+		"/var/www/symfony-project/src/AppBundle/Controller/GenusController.php",
+		"/var/www/symfony-project/app/Resources/views/default/index.html.twig",
+		"/var/www/symfony-project/web/js/main.js",
+		"/home/luciano/downloads/symfony/finish/app/Resources/views/base.html.twig",
+		"/home/luciano/downloads/symfony/start/tutorial/app/Resources/views/base.html.twig",
+		"/home/luciano/downloads/symfony/finish/src/AppBundle/Controller/GenusController.php",
+		"/home/luciano/.config/sublime-text-2/Packages/SymfonyCommander/SymfonyCommander.sublime-settings",
+		"/var/www/symfony-project/src/AppBundle/Controller/DefaultController.php",
+		"/var/www/symfony-project/app/config/routing.yml",
+		"/var/www/symfony-project/app/config/config.yml",
+		"/var/www/marabraz/gis/api/includes/init.php",
+		"/var/www/marabraz/gis/api/includes/slim_init.php",
+		"/var/www/3l/admin/config.php",
+		"/var/www/3l/admin/inc/login.php",
+		"/var/www/3l/admin/inc/common.php",
+		"/var/www/3l/admin/class/Bootstrap.php",
+		"/var/www/3l/admin/class/Template.php",
+		"/var/www/3l/index.php",
+		"/var/www/3l/admin/index.php",
+		"/var/www/3l/admin/img/logo/logo.png",
+		"/var/www/3l/admin/modules/alunos/index.php",
+		"/var/www/3l/admin/inc/menu.php",
+		"/var/www/3l/admin/inc/settingsorder.php",
+		"/var/www/3l/admin/inc/geralog.php",
+		"/var/www/3l/admin/inc/head-bkp.php",
+		"/tmp/fz3temp-1/config.php",
+		"/var/www/3l/admin/modules/users/list.php",
+		"/var/www/3l/admin/inc/pagination.php",
+		"/var/www/3l/admin/js/contas.js",
+		"/var/www/3l/admin/js/default.js",
+		"/var/www/3l/admin/css/megamenu.css",
+		"/var/www/3l/admin/modules/sistema/index.php",
+		"/var/www/3l/admin/info.php",
+		"/var/www/quimis/application/controllers/adm/noticias.php",
+		"/var/www/quimis/application/controllers/adm/cadastrosinstitucionais.php",
+		"/var/www/quimis/application/controllers/adm/assistenciatecnicas.php",
+		"/var/www/quimis/application/controllers/adm/representantes.php",
+		"/var/www/quimis/application/controllers/adm/faleconosco.php",
+		"/var/www/quimis/application/views/adm/assistenciatecnicas/form_content.php",
+		"/var/www/quimis/application/views/adm/noticias/form_content.php",
+		"/var/www/quimis/application/views/adm/listagem.php",
+		"/var/www/quimis/application/views/adm/cadastrosinstitucionais/form_content.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/var/www/lucianomarinho",
+			"/var/www/3l/admin",
+			"/var/www/quimis/",
+			"/var/www/quimis/application/controllers",
+			"/var/www/quimis/application",
+			"/var/www/quimis",
+			"/var/www/quimis/system",
+			"/var/www/quimis/application",
+			"/var/www/quimis/application/views/adm",
+			"/var/www/quimis/application",
+			"/var/www/quimis"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"para",
+			"paragonie",
+			"random_compat",
+			"php",
+			"paragonie",
+			"para",
+			"request->request->get('",
+			"array('id' => ",
+			"array('",
+			"array(",
+			"form_row",
+			"form_div_layout.html.twig",
+			"array('",
+			"'label_attr' => array('class' => 'sr-only')",
+			"'class' => 'form-control', ",
+			"'class' => 'form-control'",
+			"array(",
+			"label",
+			"contact_form",
+			"image-popup",
+			"projects-animate",
+			"oportunidades",
+			"icon-network",
+			"icon-mobile",
+			"rgba(68, ",
+			"rgba",
+			"#21a658",
+			"#166f3b",
+			"#27c468",
+			"js-lma-accordion-toggle",
+			"Show More",
+			"hero-4.jpg",
+			"lma-overlay-text",
+			"</h1>",
+			"icon-twitter",
+			"href=\"",
+			"href=\"#\" ",
+			"rgba",
+			"rgbs",
+			"icon-facebook-with-circle",
+			"fh5co",
+			"{{ asset('{{ asset",
+			"images",
+			"jpg",
+			"href=\"images",
+			"apple-touch-icon.png",
+			"errors.xml",
+			"404 Not Found",
+			"The server returned a \"404 Not Found\"",
+			"404",
+			"exception_controller\n",
+			"/web/",
+			"Line",
+			"Default",
+			"delete",
+			"line",
+			"\"ctrl+shift+f\"",
+			"reindent",
+			"login",
+			"logout",
+			"=\"top\"",
+			"link",
+			"\"/?page",
+			"$.get('/?mod",
+			"location=\"/",
+			"border",
+			"<form",
+			"' ",
+			"')));\n",
+			"getEstado",
+			"visible",
+			"titulo",
+			"camposGrid['",
+			"camposGrid['titulo",
+			"camposGrid",
+			"$camposGrid",
+			"visible",
+			"getImagem",
+			"ctrl+1",
+			"ctrl+b",
+			"ctrl+1",
+			"pane",
+			"ctrl+1",
+			"menuAdmin"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"lma",
+			"href=\"{{ asset('images",
+			"\"/admin/?page",
+			"$.get('/admin/?mod",
+			"location=\"/admin/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/easyphp-devserver-14-1vc11/data/localweb/gis/api/includes/classes/GIS.php",
+					"settings":
+					{
+						"buffer_size": 1082641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								951,
+								951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/luciano/.config/sublime-text-2/3l.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 375.0,
+	"status_bar_visible": true
+}

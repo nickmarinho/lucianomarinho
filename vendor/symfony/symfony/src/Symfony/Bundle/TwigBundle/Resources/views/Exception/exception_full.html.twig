@@ -1,0 +1,7 @@
+{% block head %}
+    <link href="{{ absolute_url(asset('bundles/framework/css/exception.css')) }}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+{% block body %}
+    {% include '@Twig/Exception/exception.html.twig' %}
+{% endblock %}
