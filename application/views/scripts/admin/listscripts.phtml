@@ -1,0 +1,92 @@
+<?php
+$pagename = $this->pagename;
+$name = $this->name;
+$category = $this->category;
+echo "<script>newfieldcount = " . count($this->datalist) . ";loff();nd();</script>\n";
+?>
+<br />
+<table class='sample' align='center'>
+ <tbody>
+  <tr>
+   <td style="text-align:left;width:25%;">
+    <a class="button openmodalbox" onclick="javascript:void(0);">Add New<input type="hidden" name="ajaxhref" value="addscripts" /></a>
+    <a class="button" onclick="javascript:listscriptscategories();">List Categories</a>
+   </td>
+   <td style="text-align:center;width:80%;">
+    Filter: <input type="text" id="fname" name="fname" value="" onkeypress="javascript:filter('scripts',event);" size="50" />
+    <a class="button" onclick="filterm('scripts');">Ok</a>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class='sample' align='center' id="grid">
+ <thead>
+  <tr>
+   <th style='width:783px;'>Name</th>
+   <th style='width:137px;'>Date</th>
+   <th style='width:19px;'>&nbsp;</th>
+   <th style='width:19px;'>&nbsp;</th>
+   <th style='width:19px;'>&nbsp;</th>
+   <th style='width:19px;'>&nbsp;</th>
+  </tr>
+ </thead>
+ <tbody id="list">
+<?php
+if(count($this->datalist) > 0)
+{
+	$c = 0;
+	foreach ($this->datalist as $data)
+	{
+		if($data['display'] == '1'){ $over = "overa"; }
+		else{ $over = "overb"; }
+?>
+ <tr id='list_<?php echo $c; ?>' class="<?php echo $over; ?>" onmouseover="this.className='over'" onmouseout="this.className='<?php echo $over; ?>'">
+  <td style='width:783px;'>
+   <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/scripts/<?php echo $data['name']; ?>.html" target="_blank"><?php
+if(!empty($name)) echo str_ireplace($name, "<b class='filterwords'>" . $name . "</b>", utf8_encode(stripslashes($data['name']))); 
+else echo utf8_encode(stripslashes($data['name']));
+?></a>
+  </td>
+  <td style='width:137px;'><?php $cdate = strtotime($data['cdate']); $cdate = date('d/m/Y g:ia', $cdate); echo $cdate; ?></td>
+  <td style='text-align:center;width:19px;'>
+   <a class="openmodalbox" onclick="javascript:void(0);" onmouseover="return overlib('Preview ID: <?php echo $data['id']; ?>');" onmouseout="return nd();">
+    <img src='<?php echo SITE_PATH; ?>/img/admin/view.gif' class='img' />
+    <input type="hidden" name="ajaxhref" value="viewscripts?id=<?php echo $data['id']; ?>" />
+   </a>
+  </td>
+  <td style='text-align:center;width:19px;' id="displayonoff_<?php echo $data['id']; ?>">
+   <a onclick="javascript:displayonoff('scripts','<?php echo $data['id']; ?>','<?php echo $c; ?>');" onmouseover="return overlib('Enable/Disable Display ID: <?php echo $data['id']; ?>');" onmouseout="return nd();">
+    <img src='<?php echo SITE_PATH; ?>/img/admin/<?php if($data['display'] == '1'){ echo 'ok.png'; } else{ echo 'not-ok.png'; } ?>' class='img' />
+   </a>
+  </td>
+  <td style='text-align:center;width:19px;'>
+   <a class="openmodalbox" onclick="javascript:void(0);" onmouseover="return overlib('Edit ID: <?php echo $data['id']; ?>');" onmouseout="return nd();">
+    <img src='<?php echo SITE_PATH; ?>/img/admin/edit.png' class='img' />
+    <input type="hidden" name="ajaxhref" value="editscripts?id=<?php echo $data['id']; ?>" />
+   </a>
+  </td>
+  <td style='text-align:center;width:19px;'>
+   <img src='<?php echo SITE_PATH; ?>/img/admin/delete.png' class='img' onclick="removescripts('<?php echo $data['id']; ?>','<?php echo $c; ?>');" title="Remove ID: <?php echo $data['id']; ?>" onmouseover="return overlib('Remove <?php echo $data['id']; ?>');" onmouseout="return nd();" />
+  </td>
+ </tr>
+<?php
+		$c++;
+	}
+}
+else
+{
+?>
+ <tr id="list_empty" class="<?php echo $dcolors[$d]; ?>" onmouseover="this.className='over'" onmouseout="this.className='<?php echo $dcolors[$d]; ?>'">
+  <td colspan='7' style='text-align:center;'><a class="button openmodalbox" onclick="javascript:void(0);">Nothing in database, click here to add<input type="hidden" name="ajaxhref" value="addscripts" /></a></td>
+ </tr>
+<?php
+ } ?>
+ </tbody>
+</table>
+
+<div id="paginationdiv">
+<?php 
+if($this->paginator->count() > 1) echo $this->paginationControl($this->paginator, 'Elastic', 'admin' . DS . 'pagination.phtml');
+?>
+</div>

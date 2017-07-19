@@ -1,0 +1,28 @@
+ <?php echo $this->doctype() . "\n";?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+<?php echo $this->render('head.phtml') . "\n";?>
+ </head>
+ <body onload="_onload();" onunload="_onunload();">
+  <div id="layout">
+   <div id="maincontent">
+<?php echo $this->layout()->content; ?>
+   </div>
+  </div>
+  <div id="bottombar"><div id="bottombarback"></div></div>
+  <div id="footer">
+<?php echo $this->render('footer.phtml') . "\n";?>
+  </div>
+  <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  <div style="width:100%;" id="loaderContainer">
+   <div id="loaderContainerWH">
+    <div id="loader" style="z-index: 2147483647;">
+     <img id="loaderAnimation" style="background:url('<?php echo SITE_PATH; ?>/img/loading.gif');height:15px;width:15px;" src="<?php echo SITE_PATH; ?>/img/1x1.gif" />
+     <strong>please wait, page is loading ...</strong>
+     <img id="loaderAnimation" style="background:url('<?php echo SITE_PATH; ?>/img/loading.gif');height:15px;width:15px;" src="<?php echo SITE_PATH; ?>/img/1x1.gif" />
+    </div>
+    <script type="text/javascript">_lon();</script>
+   </div>
+  </div>
+ </body>
+</html>

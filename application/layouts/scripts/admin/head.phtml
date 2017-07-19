@@ -1,0 +1,139 @@
+<?php
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle(SITE_TITLE);
+echo $this->headTitle() . "\n";
+
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/admin.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/dropdown.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/img/skins/tango/skin.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/jquery/jquery.modalbox.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/jquery/jquery.ui.all.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/jquery/jquery-ui-timepicker.css') . "\n";
+$this->headLink()->appendStylesheet(SITE_PATH . '/css/jquery/jquery.clock.css') . "\n";
+echo $this->headLink() . "\n";
+
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery-1.5.1.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.dropdown.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.maskmoney.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.maskedinput-1.2.2.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.tools.min.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.jcarousel.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.modalbox-1.2.0.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery-ui-1.8.11.custom.min.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.ui.datepicker-pt-BR.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.ui.droppable.min.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.ui.mouse.min.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.ui.timepicker.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.clock.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/jquery/jquery.simpleresizabletables.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/overlib.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/scripts.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/admin.js', 'text/javascript') . "\n";
+$this->headScript()->appendFile(SITE_PATH . '/js/ckeditor/ckeditor.js', 'text/javascript') . "\n";
+echo $this->headScript() . "\n";
+?>
+<script type="text/javascript">
+<!--
+var carregando = function()
+{
+	//for(i=0;i<4;i++)
+	//{
+	//	setTimeout(function(){
+	//		$('#dots').append('.');
+	//	},300);
+	//}
+
+	jQuery.fn.modalBox({ 
+		setTypeOfFaderLayer : 'black',
+		killModalboxWithCloseButtonOnly : true,
+		usejqueryuidragable : true,
+		setStylesOfFaderLayer : {// define the opacity and color of fader layer here
+			white : 'background-color:#fff; filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.6;',
+			black : 'background-color:#000; filter:alpha(opacity=40); -moz-opacity:0.4; opacity:0.4;',
+			transparent : 'background-color:transparent;'
+		},
+		setWidthOfModalLayer: 800, 
+		directCall: { 
+			element : '#loading'
+		}
+	});
+}
+
+var modalboxGlobalDefaults = {
+	localizedStrings : {
+		messageCloseWindow : 'Fechar',
+		messageAjaxLoader : 'Aguarde ...',
+		errorMessageIfNoDataAvailable : '<strong>Nada para mostrar!</strong>',
+		errorMessageXMLHttpRequest : 'Erro: XML-Http-Request Status \"500\"',
+		errorMessageTextStatusError : 'Erro: Falha ao carregar AJAX'
+	}
+};
+
+var stuHover = function() {
+	var cssRule;
+	var newSelector;
+	for (var i = 0; i < document.styleSheets.length; i++)
+		for (var x = 0; x < document.styleSheets[i].rules.length ; x++)
+			{
+			cssRule = document.styleSheets[i].rules[x];
+			if (cssRule.selectorText.indexOf("LI:hover") >= 0)
+			{
+				 newSelector = cssRule.selectorText.replace(/LI:hover/gi, "LI.iehover");
+				document.styleSheets[i].addRule(newSelector , cssRule.style.cssText);
+			}
+		}
+	var getElm = document.getElementById("nav").getElementsByTagName("LI");
+	for (var i=0; i<getElm.length; i++) {
+		getElm[i].onmouseover=function() {
+			this.className+=" iehover";
+		}
+		getElm[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", stuHover);
+
+
+var getHost = function(){
+	var url = window.location.href;
+	var nohttp = url.split('//')[1];
+	var domain = nohttp.split('/')[0];
+	var subdomain = nohttp.split('/')[1];
+	var module = nohttp.split('/')[2];
+	return "http://" + domain + "/" + subdomain + "/" + module;
+}
+
+$.clock.locale = {"pt":{
+	"weekdays":["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"],
+	"months":["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+}}
+
+$(document).ready(function(){
+	//carregando();
+	$("#datetime").clock({"langSet":"pt","format":"24"});
+	$("a.links").click(function(){ _lon(); });
+	$("#submitbutton").click(function(){ _lon(); });
+	$(":button").click(function(){ _lon(); });
+	$("#tabs").tabs();
+	$("a.button").button();
+
+	if(getHost() != '<?php echo "http://" . $_SERVER['HTTP_HOST'] . "/admin/"; ?>')
+	{
+		setTimeout(function(){
+			$("#modalBoxFaderLayer").fadeOut('slow');
+			$("#modalBox").fadeOut('slow');
+		}, 100);
+	}
+});
+//-->
+</script>
+<link href="<?php echo SITE_PATH; ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--[if IE]>
+<style type="text/css">
+table.sample thead tr, table.login tr td:first-child{background:url('<?php echo SITE_PATH; ?>/admin/img/msg_bar.png') repeat-x;}
+table.login{border:1px solid #000;} 
+table.login td{border-bottom:1px solid #000;border-right:1px solid #000;}
+</style>
+<![endif]-->

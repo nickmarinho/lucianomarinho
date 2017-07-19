@@ -1,0 +1,27 @@
+<script type="text/javascript">
+<!--
+var modalboxGlobalDefaults = {
+	localizedStrings : {
+		messageCloseWindow : 'Fechar',
+		messageAjaxLoader : 'Aguarde ...',
+		errorMessageIfNoDataAvailable : '<strong>Nada para mostrar!</strong>',
+		errorMessageXMLHttpRequest : 'Erro: XML-Http-Request Status \"500\"',
+		errorMessageTextStatusError : 'Erro: Falha ao carregar AJAX'
+	}
+};
+
+$(document).ready(function()
+{
+	$("#submitbutton").button();
+});
+//-->
+</script>
+<h1 style="text-align:center;">Please type user and password</h1>
+<?php echo $this->form; ?>
+
+<?php if($this->errorMessage != ""): ?>
+<div class="error"><?php echo $this->errorMessage; ?></div>
+<?php endif; ?>
+<?php if($this->noerrorMessage != ""): ?>
+<div class="success"><?php echo $this->noerrorMessage; ?></div>
+<?php endif; ?>

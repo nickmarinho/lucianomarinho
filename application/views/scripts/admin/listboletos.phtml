@@ -1,0 +1,89 @@
+<?php
+$pagename = $this->pagename;
+$name = $this->name;
+$id_cliente = $this->id_cliente;
+$cliente = $this->cliente;
+echo "<script>newfieldcount = " . count($this->datalist) . ";loff();nd();</script>\n";
+
+if(count($cliente) > 0)
+{
+?>
+<br />
+<table class='sample' align='center'>
+ <tbody>
+  <tr>
+   <td style="text-align:left;width:25%;">
+    <a class="button" onclick="javascript:addboletos('<?php echo $id_cliente; ?>');">Add New</a>
+    <a class="button" onclick="javascript:listclientes();">List Clientes</a>
+   </td>
+   <td><h1><?php echo utf8_encode(stripslashes($cliente['nome'])); ?></h1></td>
+  </tr>
+ </tbody>
+</table>
+
+<table class='sample' align='center' id="grid">
+ <thead>
+  <tr>
+   <th style='width:100px;'>Valor</th>
+   <th style='width:80px;'>Vencimento</th>
+   <th style='width:60px;'>Mês Ref.</th>
+   <th style='width:50px;'>Número</th>
+   <th>Obs</th>
+   <th style='width:19px;'>Pago</th>
+   <th style='width:19px;'>&nbsp;</th>
+   <th style='width:19px;'>&nbsp;</th>
+   <th style='width:19px;'>&nbsp;</th>
+  </tr>
+ </thead>
+ <tbody id="list">
+<?php
+if(count($this->datalist) > 0)
+{
+	$c = 0;
+	foreach ($this->datalist as $data)
+	{
+		$over = "overa";
+		$valor = number_format($data['valor'],2,',','.');
+		$vencimento = date("d/m/Y", strtotime($data['vencimento']));
+?>
+ <tr id='list_<?php echo $c; ?>' class="<?php echo $over; ?>" onmouseover="this.className='over'" onmouseout="this.className='<?php echo $over; ?>'">
+  <td style='cursor:pointer;text-align:right;width:100px;' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');">R$ <?php echo $valor; ?></td>
+  <td style='cursor:pointer;text-align:center;width:80px;' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');"><?php echo $vencimento; ?></td>
+  <td style='cursor:pointer;text-align:center;width:60px;' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');"><?php echo $data['mes_referencia']; ?></td>
+  <td style='cursor:pointer;text-align:right;width:50px;' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');"><?php echo $data['numero']; ?></td>
+  <td style='cursor:pointer;' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');"><?php echo $data['obs']; ?></td>
+  <td style='text-align:center;width:19px;' id="pagonoff_<?php echo $data['id']; ?>">
+   <a onclick="javascript:pagonoff('boletos','<?php echo $data['id']; ?>','<?php echo $c; ?>');" onmouseover="return overlib('Pago ID: <?php echo $data['id']; ?>');" onmouseout="return nd();">
+    <img src='<?php echo SITE_PATH; ?>/img/admin/<?php if($data['pago'] == '1'){ echo 'ok.png'; } else{ echo 'not-ok.png'; } ?>' class='img' />
+   </a>
+  </td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/pdf.png' class='img' onclick="exportpdf('boletos','<?php echo $data['id']; ?>');" onmouseover="return overlib('Exportar PDF ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/edit.png' class='img' onclick="editboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');" onmouseover="return overlib('Editar ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/delete.png' class='img' onclick="removeboletos('<?php echo $id_cliente; ?>','<?php echo $data['id']; ?>','<?php echo $c; ?>');" title="Deletar <?php echo $data['id']; ?>" onmouseover="return overlib('Deletar ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
+ </tr>
+<?php
+		$c++;
+	}
+}
+else
+{
+?>
+ <tr id="list_empty" class="<?php echo $dcolors[$d]; ?>" onmouseover="this.className='over'" onmouseout="this.className='<?php echo $dcolors[$d]; ?>'">
+  <td colspan='7' style='text-align:center;'><a class="button" onclick="addboletos('<?php echo $id_cliente; ?>');">Nothing in database, click here to add</a></td>
+ </tr>
+<?php
+ } ?>
+ </tbody>
+</table>
+<script type="text/javascript" src="<?php echo SITE_PATH; ?>/js/jquery/jquery.maskmoney.js"></script>
+<script type="text/javascript" src="<?php echo SITE_PATH; ?>/js/jquery/jquery.maskedinput-1.2.2.js"></script>
+
+<div id="paginationdiv">
+<?php 
+if($this->paginator->count() > 1) echo $this->paginationControl($this->paginator, 'Elastic', 'admin' . DS . 'pagination.phtml');
+?>
+</div>
+<?php 
+}
+else echo "<h1>Você não selecionou um cliente corretamente ?!</h1>";
+?>

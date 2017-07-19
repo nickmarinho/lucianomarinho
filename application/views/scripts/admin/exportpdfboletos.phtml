@@ -1,0 +1,10 @@
+<?php echo $this->form; ?>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#form_boletospdf").removeAttr("target");
+	
+	var newbutton = "<a id='v' class='button openmodalmox' href='javascript:void(0);' onclick='exportpdfaction(\"boletos\",\"2\");'>Visualizar Boleto</a>";
+	$("#tdbuttons").html($("#tdbuttons").html()+newbutton);
+	$('.button').button();
+});
+</script>

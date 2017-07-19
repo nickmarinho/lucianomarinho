@@ -1,0 +1,18 @@
+<?php
+$data = $this->row;
+$valor = number_format($data['valor'],2,',','.');
+$vencimento = date("d/m/Y", strtotime($data['vencimento']));
+?>
+  <td style='cursor:pointer;text-align:right;width:100px;' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');">R$ <?php echo $valor; ?></td>
+  <td style='cursor:pointer;text-align:center;width:80px;' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');"><?php echo $vencimento; ?></td>
+  <td style='cursor:pointer;text-align:center;width:60px;' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');"><?php echo $data['mes_referencia']; ?></td>
+  <td style='cursor:pointer;text-align:right;width:50px;' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');"><?php echo $data['numero']; ?></td>
+  <td style='cursor:pointer;' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');"><?php echo $data['obs']; ?></td>
+  <td style='text-align:center;width:19px;' id="pagonoff_<?php echo $data['id']; ?>">
+   <a onclick="javascript:pagonoff('boletos','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');" onmouseover="return overlib('Pago ID: <?php echo $data['id']; ?>');" onmouseout="return nd();">
+    <img src='<?php echo SITE_PATH; ?>/img/admin/<?php if($data['pago'] == '1'){ echo 'ok.png'; } else{ echo 'not-ok.png'; } ?>' class='img' />
+   </a>
+  </td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/pdf.png' class='img' onclick="exportpdf('boletos', '<?php echo $data['id']; ?>');" onmouseover="return overlib('Exportar PDF ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/edit.png' class='img' onclick="editboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');" onmouseover="return overlib('Editar ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
+  <td style='text-align:center;width:19px;'><img src='<?php echo SITE_PATH; ?>/img/admin/delete.png' class='img' onclick="removeboletos('<?php echo $data['id_cliente']; ?>','<?php echo $data['id']; ?>','<?php echo $this->div; ?>');" onmouseover="return overlib('Deletar ID: <?php echo $data['id']; ?>');" onmouseout="return nd();" /></td>
